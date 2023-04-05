@@ -1,0 +1,40 @@
+@import url('https://font.googleapis.com/css2?family=Poppins');
+
+*{
+    font-family:'Poppins';
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+body{
+    margin:0px 90px;
+}
+
+
+.quiz-question {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.quiz-options li {
+    list-style: none;
+}
+
+.quiz-options label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 5px;
+}

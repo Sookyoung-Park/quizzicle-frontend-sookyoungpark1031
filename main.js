@@ -1,19 +1,16 @@
 //Start Section
-let start = document.querySelector("#start");
-
-//guide Section
-let guide = document.querySelector("#guide");
-let continueBtn = document.querySelector("#continue");
+let start = document.querySelector(".start");
+let startbtn=document.getElementById('start-text');
 
 //Quiz Section
 let quiz = document.querySelector("#quiz");
 let time = document.querySelector("#time");
 
 //question Section
-let questionNo = document.querySelector("#questionNo");
 let questionText = document.querySelector("#questionText");
 
 //Multiple Choices Of Questions
+const qoptions = document.querySelectorAll('.q-option');
 let option1 = document.querySelector("#option1");
 let option2 = document.querySelector("#option2");
 
@@ -34,14 +31,47 @@ let interval = 0;
 //total points
 let selectedLabels=[];
 
+
+
+
+/* 존나 문제.. 실행해놓은거 다 망가짐
+일단 클릭해도 selected 클래스가 안생김
+그래서인지 다음으로 넘어가지도 않음
+그래서인지 답변도 저장ㅇ ㅣ안됨 ㅈ됨..
+qoptions.forEach(option => {
+    option.addEventListener('click', () => {
+      // 선택한 옵션에 selected 클래스 추가
+        qoptions.forEach(option => {
+        option.querySelector('h3').classList.remove('selected');
+    });
+    option.querySelector('h3').classList.add('selected');
+    });
+});
+
+
+  // 선택지를 초기화하는 함수
+function resetOptions() {
+    qoptions.forEach(option => {
+    option.querySelector('h3').classList.remove('selected');
+    });
+}
+
+
+  // "다음 문제" 버튼에 클릭 이벤트 추가
+document.getElementById("next_question").addEventListener("click", () => {
+    const selectedCount = selectedLabels.filter((label) => label).length;
+    resetOptions();
+});
+*/
+
 //what happen when 'Start' Button Will Click
 start.addEventListener("click", () => {
     start.style.display = "none";
-    guide.style.display = "block";
 });
 
+
+
 let loadData = () => {
-    questionNo.innerText = index + 1 + ". ";
     questionText.innerText = quizdata[index].question;
     option1.innerText = quizdata[index].options[0].text;
     option2.innerText = quizdata[index].options[1].text;
@@ -49,10 +79,9 @@ let loadData = () => {
 
 loadData();
 
-//what happen when 'Continue' Button
-continueBtn.addEventListener("click", () => {
+
+startbtn.addEventListener("click", () => {
     quiz.style.display = "block";
-    guide.style.display = "none";
 
     loadData();
 
@@ -61,6 +90,7 @@ continueBtn.addEventListener("click", () => {
         removeActive.classList.remove("active");
     })
 });
+
 
 
 choice_que.forEach((choices, choiceNo) => {
@@ -87,7 +117,7 @@ document.getElementById("next_question").addEventListener("click", () => {
     const selectedCount = selectedLabels.filter((label) => label).length;
     
     if((index+1)!==selectedCount){
-        alert('damm');
+        alert('Please choose one!');
         
         // 이전 문제의 선택지를 초기화
         selectedLabels[index] = null;
@@ -95,7 +125,6 @@ document.getElementById("next_question").addEventListener("click", () => {
         option.classList.remove("active", "disabled");
         });
 
-        // 이전 문제로 돌아가서 다시 푸는 처리
         index--;
 
         return;

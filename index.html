@@ -9,38 +9,33 @@
 
 <body>
     <div id="container">
-
-        <div id="start">Let's Start!</div>
-
-        <div id="guide">
-            <h1>Quiz Guide</h1>
-            <h2>Quiz guide description  Quiz guide description  Quiz guide description.</h2>
-            <div id="button">
-                <button id="continue">Continue</button>
-            </div>
+        <div class="start">
+            <h1>If you are not a human, what could you be?!</h1>
+            <div id="start-text">Let's Start!</div>
         </div>
 
         <!--    Quiz Section    -->
         <div id="quiz">
-            <div id="quiz_header">
-                <h3>Amazing Quiz App</h3>
-            </div>
-
             <!--     Quiz Questions  -->
             <div id="question">
-                <h2 id="questionNo"></h2>
                 <h2 id="questionText"></h2>
             </div>
-
             <!--       Quiz Choices   -->
+            <div id="imgs">
+                <img src="./ref.png" alt="">
+                <img src="./ref.png" alt="">
+            </div>
             <div id="optionList">
-                <h4 class="choice_que A" id="option1"></h4>
-                <h4 class="choice_que B" id="option2"></h4>
+                <div class="q-option">
+                    <h3 class="choice_que A" id="option1"></h3>
+                </div>
+                <div class="q-option">
+                    <h3 class="choice_que B" id="option2"></h3>
+                </div>
             </div>
 
             <!--  Answers Section-->
             <div id="answersSection">
-
                 <h3 id="next_question">Next</h3>
             </div>
         </div>

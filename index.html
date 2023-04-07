@@ -1,113 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Soo-BuzzFeed</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-<script src="main.js"></script>
 
 <body>
-    <div class="intro">
-        <h1>What if I'm not a human, what would I be?</h1>
-    </div>
+    <div id="container">
 
+        <div id="start">Let's Start!</div>
 
-    <div class="quiz-question">
-        <h2>Q1</h2>
-        <ul class="quiz-options">
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q1" value="option1">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q1" value="option2">
-                </label>
-            </li>
-        </ul>
-    </div>
+        <div id="guide">
+            <h1>Quiz Guide</h1>
+            <h2>Quiz guide description  Quiz guide description  Quiz guide description.</h2>
+            <div id="button">
+                <button id="continue">Continue</button>
+            </div>
+        </div>
 
-    <div class="quiz-question">
-        <h2>Q2</h2>
-        <ul class="quiz-options">
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q2" value="option1">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q2" value="option2">
-                </label>
-            </li>
-        </ul>
-    </div>
+        <!--    Quiz Section    -->
+        <div id="quiz">
+            <div id="quiz_header">
+                <h3>Amazing Quiz App</h3>
+            </div>
 
-    <div class="quiz-question">
-        <h2>Q3</h2>
-        <ul class="quiz-options">
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q3" value="option1">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q3" value="option2">
-                </label>
-            </li>
-        </ul>
-    </div>
+            <!--     Quiz Questions  -->
+            <div id="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
 
-    <div class="quiz-question">
-        <h2>Q4</h2>
-        <ul class="quiz-options">
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q4" value="option1">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q4" value="option2">
-                </label>
-            </li>
-        </ul>
-    </div>
+            <!--       Quiz Choices   -->
+            <div id="optionList">
+                <h4 class="choice_que A" id="option1"></h4>
+                <h4 class="choice_que B" id="option2"></h4>
+            </div>
 
-    <div class="quiz-question">
-        <h2>Q5</h2>
-        <ul class="quiz-options">
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q5" value="option1">
-                </label>
-            </li>
-            <li>
-                <label>
-                    <img src="./ref.png" />
-                    <input type="radio" name="q5" value="option2">
-                </label>
-            </li>
-        </ul>
+            <!--  Answers Section-->
+            <div id="answersSection">
+
+                <h3 id="next_question">Next</h3>
+            </div>
+        </div>
+        
+        <!--   Result Section  -->
+        <div id="result">
+            <i class="fas fa-trophy"></i>
+            <h6 id="description">You Got </h6>
+        </div>
     </div>
+    <script src="./myq.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>

@@ -32,33 +32,37 @@ let interval = 0;
 //total points
 let selectedLabels=[];
 
+let resultKey=selectedLabels.join("");
+let resultImage = results["AAAAAA"].image;
+let resultDescription = results["AAAAAA"].description;
 
-/* 존나 문제.. 실행해놓은거 다 망가짐
-일단 클릭해도 selected 클래스가 안생김
-그래서인지 다음으로 넘어가지도 않음
-그래서인지 답변도 저장ㅇㅣ 안됨 ㅈ됨..
-
-
-choice_que.forEach(option => {
+/*right code
+optionsList.forEach(option => {
     option.addEventListener('click', event => {
         // 선택한 옵션에 'selected' 클래스 추가
-        choice_que.forEach(otherOption => {
+        optionsList.forEach(otherOption => {
         otherOption.classList.remove('selected');
-    });
-    option.classList.add('selected');
+        });
+        event.target.classList.add('selected');
     });
 });
 */
+
+let selectedOption = null; // 선택된 옵션을 저장할 변수
+
 optionsList.forEach(option => {
     option.addEventListener('click', event => {
-      // 선택한 옵션에 'selected' 클래스 추가
-      optionsList.forEach(otherOption => {
-        otherOption.classList.remove('selected');
-      });
-      event.target.classList.add('selected');
+        const clickedOption = event.target;
+        // 이전에 선택된 옵션에서 'selected' 클래스 제거
+        if (selectedOption !== null) {
+        selectedOption.classList.remove('selected');
+        }
+        // 선택한 옵션에 'selected' 클래스 추가
+        clickedOption.classList.add('selected');
+        // 선택된 옵션 업데이트
+        selectedOption = clickedOption;
     });
-  });
-  
+});
 
 
   // 선택지를 초기화하는 함수
@@ -66,6 +70,13 @@ function resetOptions() {
     optionsList.forEach(option => {
     option.querySelector('.choice_que').classList.remove('selected');
     });
+}
+
+function updateKey(){
+    if(selectedLabels.length===6){
+        resultKey = selectedLabels.join("");
+        //console.log(resultKey);
+    }
 }
 
 
@@ -85,6 +96,8 @@ start.addEventListener("click", () => {
 
 let loadData = () => {
     questionText.innerText = quizdata[index].question;
+    document.getElementById("option-image1").src = quizdata[index].options[0].image;
+    document.getElementById("option-image2").src = quizdata[index].options[1].image;
     option1.innerText = quizdata[index].options[0].text;
     option2.innerText = quizdata[index].options[1].text;
 };
@@ -142,7 +155,9 @@ document.getElementById("next_question").addEventListener("click", () => {
 
         return;
     }
+    
 });
+
 
 
 ////what happen when 'Next' Button Will Click
@@ -162,7 +177,16 @@ next_question.addEventListener("click", () => {
         //when Quiz Question Complete Display Result Section
         clearInterval(interval);
         quiz.style.display = "none";
-        description.innerHTML = `You got`+ selectedLabels;
+
+        updateKey();
+
+        resultImage = results[resultKey].image;
+        resultDescription = results[resultKey].description;
+        
+        document.getElementById("description").textContent += resultDescription;
+        document.getElementById("result-image").src = resultImage;  
+
+
         result.style.display = "block";
     }
 

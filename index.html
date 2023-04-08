@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Soo-BuzzFeed</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
     <div id="container">
+
         <div class="start">
             <h1>If you are not a human, what could you be?!</h1>
             <div id="start-text">Let's Start!</div>
         </div>
 
-        <!--    Quiz Section    -->
         <div id="quiz">
-            <!--     Quiz Questions  -->
             <div id="question">
-                <h2 id="questionText"></h2>
+                <h1 id="questionText"></h1>
             </div>
-            <!--       Quiz Choices   -->
             <div id="imgs">
-                <img src="./ref.png" alt="">
-                <img src="./ref.png" alt="">
+                <img id="option-image1" src="" alt="">
+                <img id="option-image2" src="" alt="">
             </div>
             <div id="optionList">
-                <div class="q-option">
-                    <h3 class="choice_que A" id="option1"></h3>
-                </div>
-                <div class="q-option">
-                    <h3 class="choice_que B" id="option2"></h3>
-                </div>
+                <button class="choice_que A" id="option1"></button>
+                <button class="choice_que B" id="option2"></button>
             </div>
-
-            <!--  Answers Section-->
             <div id="answersSection">
-                <h3 id="next_question">Next</h3>
+                <h2 id="next_question">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Next
+                </h2>
             </div>
         </div>
-        
-        <!--   Result Section  -->
+
         <div id="result">
             <i class="fas fa-trophy"></i>
-            <h6 id="description">You Got </h6>
+            <img id="result-image" src="" alt="">
+            <h3 id="description"></h3>
         </div>
     </div>
     <script src="./myq.js"></script>
     <script src="./main.js"></script>
 </body>
-
 </html>

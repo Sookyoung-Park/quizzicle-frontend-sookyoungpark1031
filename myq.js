@@ -3,11 +3,13 @@ let quizdata =[{
         options: [
             {
             "label": "A",
-            "text": "Man"
+            "text": "Man",
+            "image": "qimage/man.png"
         },
         {
             "label": "B",
-            "text": "Woman"
+            "text": "Woman",
+            "image": "qimage/woman.png"
         }
     ]},
     {
@@ -15,11 +17,13 @@ let quizdata =[{
         "options": [
             {
             "label": "A",
-            "text": "Formal or SemiFormal"
+            "text": "Formal or SemiFormal",
+            "image": "qimage/formal.png"
         },
         {
             "label": "B",
-            "text": "HouseParty"
+            "text": "HouseParty",
+            "image": "qimage/informal.png"
         }
     ]},
     {
@@ -27,11 +31,13 @@ let quizdata =[{
         "options": [
             {
             "label": "A",
-            "text": "Hangout with friends in the pub & nice restaurant"
+            "text": "Hangout with friends in the pub & nice restaurant",
+            "image": "qimage/friends.png"
         },
         {
             "label": "B",
-            "text": "Netflix in the bed"
+            "text": "Netflix in the bed and have a nice and peaceful dinner alone",
+            "image": "qimage/netflix.png"
         }
     ]},
     {
@@ -39,11 +45,13 @@ let quizdata =[{
         "options": [
             {
             "label": "A",
-            "text": "Excited to hear their lives"
+            "text": "Excited to hear their lives",
+            "image": "qimage/hear.png"
         },
         {
             "label": "B",
-            "text": "Excited to talk about your life to them"
+            "text": "Excited to talk about your life to them",
+            "image": "qimage/talk.png"
         }
     ]},
     {
@@ -51,11 +59,13 @@ let quizdata =[{
         "options": [
         {
             "label": "A",
-            "text": "Someone I can take care of"
+            "text": "Someone I can take care of",
+            "image": "qimage/takingcare.png"
         },
         {
             "label": "B",
-            "text": "Someone who takes care of me"
+            "text": "Someone who takes care of me",
+            "image": "qimage/takencare.png"
         }
     ]},
     {
@@ -63,11 +73,13 @@ let quizdata =[{
         "options": [
         {
             "label": "A",
-            "text": "A workshop with lots of activities and networking"
+            "text": "A workshop with lots of activities and networking",
+            "image": "qimage/workshop.png"
         },
         {
             "label": "B",
-            "text": "A speech from prominent experts on your field"
+            "text": "A speech from prominent experts on your field",
+            "image": "qimage/speech.png"
         }
     ]}
 ];

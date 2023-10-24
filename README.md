@@ -2,7 +2,8 @@
 
 **HTML, CSS, Javascript**
 
-I have created a popular Buzzfeed-style quiz in South Korea, which consists of 6 questions with two options each. To ensure accuracy, I referred to the text and images of existing results while iterating on the questions. Based on the combination of the answers to each question, the quiz generates different and interesting results. Give it a try!
+I have created a popular Buzzfeed-style quiz in South Korea, which consists of 6 questions with two options each. **In this project, we made a deliberate effort to prioritize the implementation of dynamic design through JavaScript, rather than focusing extensively on the overall website aesthetics.**
+To ensure accuracy, I referred to the text and images of existing results while iterating on the questions. Based on the combination of the answers to each question, the quiz generates different and interesting results. Give it a try!
 
 [deployed url](https://soolab2.onrender.com)
 
